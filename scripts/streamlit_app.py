@@ -1,22 +1,15 @@
 from __future__ import annotations
-
 from pathlib import Path
-
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 from shapely import wkt
-
 from sxm_mobility.config import settings
 
-
-# MUST be the first Streamlit call
 st.set_page_config(page_title="SXM Mobility Graph Lab", layout="wide")
 
-
-# --- Paths (repo-relative, Streamlit Cloud safe) ---
-APP_DIR = Path(__file__).resolve().parent          # .../mobility-map-lab/scripts
-REPO_DIR = APP_DIR.parent                          # .../mobility-map-lab
+APP_DIR = Path(__file__).resolve().parent          
+REPO_DIR = APP_DIR.parent                         
 PROCESSED_DIR = REPO_DIR / "data" / "processed"
 
 EDGES_PATH = PROCESSED_DIR / "edges.parquet"
@@ -24,13 +17,9 @@ BOTTLENECKS_PATH = PROCESSED_DIR / "baseline_bottlenecks.parquet"
 KPI_PATH = PROCESSED_DIR / "results_baseline.parquet"
 SCEN_PATH = PROCESSED_DIR / "results_scenarios.parquet"
 
-
-# --- UI header ---
 st.title("SXM Mobility Graph Lab — Network Map (Plotly + OpenStreetMap)")
 st.caption("Prototype dashboard scaffold. Add maps + scenario runners here.")
 
-
-# --- Debug panel (helps on Streamlit Cloud) ---
 with st.expander("Debug: paths & files", expanded=False):
     st.write("CWD:", str(Path.cwd()))
     st.write("Repo dir:", str(REPO_DIR))
@@ -40,8 +29,6 @@ with st.expander("Debug: paths & files", expanded=False):
     st.write("EDGES_PATH:", str(EDGES_PATH))
     st.write("EDGES exists?:", EDGES_PATH.exists())
 
-
-# --- Inputs ---
 st.subheader("Inputs")
 st.write(
     {
@@ -53,8 +40,6 @@ st.write(
     }
 )
 
-
-# --- Baseline outputs ---
 st.subheader("Baseline outputs")
 try:
     kpi = pd.read_parquet(KPI_PATH)
@@ -70,7 +55,6 @@ except Exception as e:
     st.warning(f"Baseline outputs error: {e}")
 
 
-# --- Scenario outputs ---
 st.subheader("Scenario outputs")
 try:
     scen = pd.read_parquet(SCEN_PATH)
@@ -81,17 +65,40 @@ except Exception as e:
     st.warning(f"Scenario outputs error: {e}")
 
 
-# --- Helper functions ---
-def linestring_to_lonlat_lists(wkt_str: str):
+def linestring_to_lonlat_lists(wkt_str: str) -> tuple[list[float], list[float]]:
+    """Parse a WKT LineString and return longitude/latitude coordinate lists.
+
+    Assumes the geometry is a LineString (or LineString-like) and that coordinates
+    are in (lon, lat) order, as commonly stored in OSM/Geo data.
+
+    :param wkt_str: WKT string representing a LineString geometry.
+    :type wkt_str: str
+    :raises Exception: If the WKT cannot be parsed or is not a LineString-like geometry.
+    :return: A tuple of (lons, lats) lists extracted from the geometry.
+    :rtype: tuple[list[float], list[float]]
+    """
     geom = wkt.loads(wkt_str)
     xs, ys = geom.xy  # xs=lon, ys=lat
     return list(xs), list(ys)
 
 
-def build_network_trace(edges_df: pd.DataFrame, max_edges: int | None = None):
-    """
-    Efficiently draw many line segments by concatenating them into one trace,
-    using None separators between segments.
+def build_network_trace(edges_df: pd.DataFrame, max_edges: int | None = None) -> "go.Scattermapbox":
+    """Build a single Plotly Mapbox trace representing many network edges.
+
+    Efficiently draws many line segments by concatenating all coordinates into one
+    `Scattermapbox` trace, using `None` separators between segments (Plotly treats
+    `None` as a line break).
+
+    Expects `edges_df` to contain a `geometry_wkt` column with WKT LineString values.
+
+    :param edges_df: Edge table containing a `geometry_wkt` column.
+    :type edges_df: pd.DataFrame
+    :param max_edges: Optional cap on the number of edges to render (uses `.head()`),
+        defaults to None.
+    :type max_edges: int | None, optional
+    :raises KeyError: If `geometry_wkt` column is missing.
+    :return: A Plotly Scattermapbox trace suitable for adding to a Figure.
+    :rtype: go.Scattermapbox
     """
     if max_edges is not None:
         edges_df = edges_df.head(max_edges)
@@ -112,7 +119,21 @@ def build_network_trace(edges_df: pd.DataFrame, max_edges: int | None = None):
     )
 
 
-def compute_center(edges_df: pd.DataFrame):
+def compute_center(edges_df: pd.DataFrame) -> tuple[float, float]:
+    """Compute an approximate map center (lat, lon) from edge geometries.
+
+    Uses a small sample of up to the first 200 non-null `geometry_wkt` rows, parses
+    each geometry, and averages all coordinates to estimate the center.
+
+    If no coordinates are available, falls back to a hard-coded center
+    (approximately Sint Maarten).
+
+    :param edges_df: Edge table containing a `geometry_wkt` column.
+    :type edges_df: pd.DataFrame
+    :raises KeyError: If `geometry_wkt` column is missing.
+    :return: A `(lat, lon)` tuple representing the center point.
+    :rtype: tuple[float, float]
+    """
     # quick-and-good center: take first N geometries and average coords
     sample = edges_df["geometry_wkt"].dropna().head(200)
     lons_sum, lats_sum, n = 0.0, 0.0, 0
@@ -125,9 +146,8 @@ def compute_center(edges_df: pd.DataFrame):
         return 18.0, -63.1  # fallback (SXM-ish)
     return (lats_sum / n), (lons_sum / n)
 
-
-# --- Map rendering ---
-st.sidebar.header("Render options")
+st.subheader("St. Maarten Road Network Map")
+st.sidebar.header("Render options") 
 max_edges = st.sidebar.slider("Max edges to draw (performance)", 500, 20000, 8000, step=500)
 
 if not EDGES_PATH.exists():
@@ -139,27 +159,20 @@ if not EDGES_PATH.exists():
     st.stop()
 
 edges = pd.read_parquet(EDGES_PATH)
-
 base_trace = build_network_trace(edges, max_edges=max_edges)
 center_lat, center_lon = compute_center(edges)
 
 fig = go.Figure()
 fig.add_trace(base_trace)
 
-# Optional bottleneck overlay
 show_bottlenecks = st.sidebar.checkbox("Overlay bottlenecks (if available)", value=True)
 top_n = st.sidebar.slider("Top N bottlenecks", 10, 300, 50, step=10)
 
 if show_bottlenecks:
     try:
         b = pd.read_parquet(BOTTLENECKS_PATH)
-
-        # Join to recover geometry for bottlenecks
         merged = b.merge(edges, on=["u", "v", "key"], how="left")
-
-        # If your bottleneck metric isn't "delay", this will still work with a fallback
         metric_col = "delay" if "delay" in merged.columns else None
-
         merged = merged.dropna(subset=["geometry_wkt"])
         if metric_col:
             merged = merged.sort_values(metric_col, ascending=False)
