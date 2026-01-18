@@ -13,6 +13,25 @@ from sxm_mobility.io.osm_ingest import load_gpickle
 
 
 def main() -> None:
+    """Run baseline traffic assignment and export bottlenecks + KPI summary.
+
+    Loads a prebuilt graph from `{data_dir}/processed/graph.gpickle`, generates random
+    OD demand pairs, runs MSA traffic assignment, and exports:
+
+    - `baseline_bottlenecks.parquet` and `baseline_bottlenecks.csv` (top bottleneck edges)
+    - `results_baseline.parquet` (baseline KPI summary)
+
+    The summary includes:
+    - graph size (nodes/edges)
+    - OD pair count
+    - assignment parameters (iters, BPR alpha/beta)
+    - KPIs (total system travel time, total delay)
+
+    :raises FileNotFoundError: If the required graph artifact is missing.
+    :raises ValueError: If generated OD nodes are not present in the loaded graph.
+    :return: None
+    :rtype: None
+    """
     out_dir = Path(settings.data_dir) / "processed"
     graph_path = out_dir / "graph.gpickle"
     if not graph_path.exists():
@@ -31,7 +50,6 @@ def main() -> None:
     logger.info("Running assignment (iters={})", settings.msa_iters)
     G = msa_traffic_assignment(G, od=od, iters=settings.msa_iters, alpha=settings.bpr_alpha, beta=settings.bpr_beta)
 
-    # Detailed bottleneck table
     rows = top_bottlenecks(G, n=50)
     df_b = pd.DataFrame(rows)
     out_b_parquet = out_dir / "baseline_bottlenecks.parquet"
@@ -45,7 +63,6 @@ def main() -> None:
             df_b.to_csv(out_b_csv, index=False)
             logger.info("Saved bottlenecks to {}", out_b_parquet)
 
-    # Summary KPI table (1 row) for dashboards/portals
     summary = {
         "place_query": settings.place_query,
         "network_type": settings.network_type,
