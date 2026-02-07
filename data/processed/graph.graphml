@@ -21,7 +21,7 @@
 <key id="d2" for="graph" attr.name="crs" attr.type="string"/>
 <key id="d1" for="graph" attr.name="created_with" attr.type="string"/>
 <key id="d0" for="graph" attr.name="created_date" attr.type="string"/>
-<graph edgedefault="directed"><data key="d0">2026-01-18 07:36:24</data>
+<graph edgedefault="directed"><data key="d0">2026-02-07 18:39:27</data>
 <data key="d1">OSMnx 2.0.7</data>
 <data key="d2">epsg:4326</data>
 <data key="d3">True</data>
@@ -10115,8 +10115,8 @@
 <edge source="250656141" target="250656186" id="0">
   <data key="d14">[523367716, 1259658535, 1259658536, 523367720, 523395431, 523266623]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "3"]</data>
-  <data key="d10">["Airport Road", "Simpson Bay Bridge", "Welfare Road"]</data>
+  <data key="d16">["3", "2"]</data>
+  <data key="d10">["Welfare Road", "Airport Road", "Simpson Bay Bridge"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">632.0449787506252</data>
@@ -10136,7 +10136,7 @@
 <edge source="250656141" target="303248790" id="0">
   <data key="d14">[523266622, 523266620, 523266621, 1259658534]</data>
   <data key="d9">primary</data>
-  <data key="d16">["3", "2"]</data>
+  <data key="d16">["2", "3"]</data>
   <data key="d10">Welfare Road</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
@@ -10155,9 +10155,9 @@
 <edge source="250656186" target="250656141" id="0">
   <data key="d14">[523367716, 1259658535, 523367720, 1259658536, 523395431, 523266623]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "3"]</data>
+  <data key="d16">["3", "2"]</data>
   <data key="d18">30</data>
-  <data key="d10">["Simpson Bay Bridge", "Airport Road", "Welfare Road"]</data>
+  <data key="d10">["Welfare Road", "Airport Road", "Simpson Bay Bridge"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">632.0449787506252</data>
@@ -10208,7 +10208,7 @@
 <edge source="250656239" target="1792973817" id="0">
   <data key="d14">[177026370, 177026371, 89058053, 523395463, 389259124]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "1"]</data>
+  <data key="d16">["1", "2"]</data>
   <data key="d10">Airport Road</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
@@ -11974,7 +11974,7 @@
 <edge source="271823392" target="271823401" id="0">
   <data key="d14">[361195605, 361218437]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Welgelegen Drive", "Puma Road"]</data>
+  <data key="d10">["Puma Road", "Welgelegen Drive"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">410.4982279952473</data>
@@ -12454,7 +12454,7 @@
 <edge source="271824154" target="271824160" id="0">
   <data key="d14">[524751739, 173225413]</data>
   <data key="d9">secondary</data>
-  <data key="d10">["Hulda B. Richardson Road", "Sucker Garden Road"]</data>
+  <data key="d10">["Sucker Garden Road", "Hulda B. Richardson Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">131.20445581882888</data>
@@ -13310,7 +13310,7 @@
   <data key="d9">tertiary</data>
   <data key="d16">2</data>
   <data key="d18">50</data>
-  <data key="d10">["Little Bay Road", "Octavius L. Richardson Road"]</data>
+  <data key="d10">["Octavius L. Richardson Road", "Little Bay Road"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">826.632757603596</data>
@@ -13350,7 +13350,7 @@
   <data key="d9">tertiary</data>
   <data key="d16">2</data>
   <data key="d18">50</data>
-  <data key="d10">["Little Bay Road", "Octavius L. Richardson Road"]</data>
+  <data key="d10">["Octavius L. Richardson Road", "Little Bay Road"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">826.632757603596</data>
@@ -13582,7 +13582,7 @@
 <edge source="272111019" target="272110821" id="0">
   <data key="d14">[522829248, 522829250, 522829251, 522829252]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Kangaroo Road", "Otter Road"]</data>
+  <data key="d10">["Otter Road", "Kangaroo Road"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">265.82664636853474</data>
@@ -13620,7 +13620,7 @@
 <edge source="272111674" target="5927198471" id="0">
   <data key="d14">[1259655681, 429151903]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "3"]</data>
+  <data key="d16">["3", "2"]</data>
   <data key="d18">30</data>
   <data key="d10">Airport Road</data>
   <data key="d11">False</data>
@@ -15444,7 +15444,7 @@
 <edge source="303239077" target="303239304" id="0">
   <data key="d14">[95957378, 27615886]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Blueberry Drive", "Apricot Road"]</data>
+  <data key="d10">["Apricot Road", "Blueberry Drive"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">310.69385929991057</data>
@@ -17865,7 +17865,7 @@
 <edge source="303244457" target="303244474" id="1">
   <data key="d14">[27616275, 525997740, 525997741]</data>
   <data key="d9">residential</data>
-  <data key="d10">["George C. de Weever Road", "Montevideo Road"]</data>
+  <data key="d10">["Montevideo Road", "George C. de Weever Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">677.543779622946</data>
@@ -17892,7 +17892,7 @@
   <data key="d14">[27616275, 525997740, 525997741]</data>
   <data key="d9">residential</data>
   <data key="d18">30</data>
-  <data key="d10">["George C. de Weever Road", "Montevideo Road"]</data>
+  <data key="d10">["Montevideo Road", "George C. de Weever Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">677.543779622946</data>
@@ -17946,7 +17946,7 @@
 <edge source="303244591" target="6677367419" id="0">
   <data key="d14">[27616288, 27616290]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Union Farm Road", "Brasilia Road"]</data>
+  <data key="d10">["Brasilia Road", "Union Farm Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">377.56036872429553</data>
@@ -18876,7 +18876,7 @@
 </edge>
 <edge source="303246886" target="1927155683" id="0">
   <data key="d14">[182371027, 523021868]</data>
-  <data key="d9">["residential", "living_street"]</data>
+  <data key="d9">["living_street", "residential"]</data>
   <data key="d10">Aaron Jacbo's Drive</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
@@ -19457,7 +19457,7 @@
 <edge source="303247128" target="1795426206" id="1">
   <data key="d14">[509070035, 509070036, 361299774]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Sea Grape Tree Drive", "Sea Grape Tree Road"]</data>
+  <data key="d10">["Sea Grape Tree Road", "Sea Grape Tree Drive"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">107.12345145588952</data>
@@ -20339,7 +20339,7 @@
 <edge source="303248790" target="250656141" id="0">
   <data key="d14">[1259658534, 523266620, 523266621, 523266622]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "3"]</data>
+  <data key="d16">["3", "2"]</data>
   <data key="d10">Welfare Road</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
@@ -21485,7 +21485,7 @@
 <edge source="544045426" target="558621725" id="0">
   <data key="d14">[43300018, 43300020, 43300015]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Sparrow Road", "Eagle Road"]</data>
+  <data key="d10">["Eagle Road", "Sparrow Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">69.1091267190745</data>
@@ -21566,7 +21566,7 @@
 <edge source="558621725" target="544045426" id="0">
   <data key="d14">[43300018, 43300020, 43300015]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Sparrow Road", "Eagle Road"]</data>
+  <data key="d10">["Eagle Road", "Sparrow Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">69.1091267190745</data>
@@ -22495,7 +22495,7 @@
 <edge source="1109617187" target="1109617240" id="0">
   <data key="d14">[95659764, 361178069]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Félix Marlin Road", "J.D. Meiners Road"]</data>
+  <data key="d10">["J.D. Meiners Road", "Félix Marlin Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">36.66311810141504</data>
@@ -22553,7 +22553,7 @@
 <edge source="1109617240" target="1109617187" id="0">
   <data key="d14">[95659764, 361178069]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Félix Marlin Road", "J.D. Meiners Road"]</data>
+  <data key="d10">["J.D. Meiners Road", "Félix Marlin Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">36.66311810141504</data>
@@ -24219,7 +24219,7 @@
 <edge source="1760740317" target="1946850254" id="0">
   <data key="d14">[184237672, 182386551]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Blackberry Road", "Guaveberry Road"]</data>
+  <data key="d10">["Guaveberry Road", "Blackberry Road"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">766.6617694955081</data>
@@ -25078,7 +25078,7 @@
 <edge source="1792973817" target="250656239" id="0">
   <data key="d14">[177026370, 177026371, 89058053, 523395463, 389259124]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "1"]</data>
+  <data key="d16">["1", "2"]</data>
   <data key="d10">Airport Road</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
@@ -25178,7 +25178,7 @@
 <edge source="1795426206" target="303247128" id="1">
   <data key="d14">[509070035, 509070036, 361299774]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Sea Grape Tree Drive", "Sea Grape Tree Road"]</data>
+  <data key="d10">["Sea Grape Tree Road", "Sea Grape Tree Drive"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">107.12345145588952</data>
@@ -27900,7 +27900,7 @@
 <edge source="1927155432" target="1927155478" id="0">
   <data key="d14">[173224536, 182371037]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Durat Road", "St John's Estate Road"]</data>
+  <data key="d10">["St John's Estate Road", "Durat Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">100.45869272302362</data>
@@ -28182,7 +28182,7 @@
 <edge source="1927155635" target="5092713950" id="1">
   <data key="d14">[523021873, 523021879]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Lane 7", "Lane 3"]</data>
+  <data key="d10">["Lane 3", "Lane 7"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">121.21815342240262</data>
@@ -28225,7 +28225,7 @@
 </edge>
 <edge source="1927155683" target="303246886" id="0">
   <data key="d14">[182371027, 523021868]</data>
-  <data key="d9">["residential", "living_street"]</data>
+  <data key="d9">["living_street", "residential"]</data>
   <data key="d10">Aaron Jacbo's Drive</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
@@ -29020,7 +29020,7 @@
 <edge source="1946850254" target="1760740317" id="0">
   <data key="d14">[184237672, 182386551]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Blackberry Road", "Guaveberry Road"]</data>
+  <data key="d10">["Guaveberry Road", "Blackberry Road"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">766.6617694955081</data>
@@ -30432,7 +30432,7 @@
 <edge source="1973316147" target="5107695012" id="0">
   <data key="d14">[186583497, 524715498]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Grand Fond Road", "Grand Fond Estate Road"]</data>
+  <data key="d10">["Grand Fond Estate Road", "Grand Fond Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">145.68589107615037</data>
@@ -33541,7 +33541,7 @@
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">1653.1393103152966</data>
-  <data key="d16">["2", "3"]</data>
+  <data key="d16">["3", "2"]</data>
   <data key="d15">LINESTRING (-63.1111427 18.0444439, -63.1110692 18.0440145, -63.1109586 18.0429329, -63.1109089 18.0428418, -63.110854 18.0427818, -63.1107426 18.04272, -63.1106159 18.0426951, -63.1104012 18.042666, -63.109506 18.0425831, -63.1090485 18.0425408, -63.108279 18.0424573, -63.1074119 18.0423592, -63.1072122 18.0423356, -63.1069855 18.0423068, -63.1062927 18.0422279, -63.1060106 18.0421965, -63.1058697 18.042185, -63.1057464 18.0421914, -63.1053527 18.0422568, -63.1046235 18.0423832, -63.103834 18.0424994, -63.1034584 18.0425547, -63.1020664 18.0427595, -63.101976 18.0427728, -63.1015083 18.0428417, -63.0997945 18.0430941, -63.0995981 18.0431316, -63.0994908 18.0431851, -63.0991996 18.0433762, -63.0991033 18.0434171, -63.0989298 18.043443, -63.0977273 18.0436144, -63.0975655 18.0436391, -63.0974521 18.043682, -63.0973626 18.0437297, -63.0972789 18.0437762)</data>
 </edge>
 <edge source="3880564008" target="2669956221" id="0">
@@ -34741,7 +34741,7 @@
 <edge source="4283312641" target="271823457" id="0">
   <data key="d14">[550511739, 429201739, 25004683, 429201734]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Bobcat Road", "Jackal Road"]</data>
+  <data key="d10">["Jackal Road", "Bobcat Road"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">427.48074071088007</data>
@@ -35082,7 +35082,7 @@
 <edge source="4283348344" target="4283348351" id="1">
   <data key="d14">[429205891, 429205876]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Shak Shak Tree Drive", "Waterrock Lane"]</data>
+  <data key="d10">["Waterrock Lane", "Shak Shak Tree Drive"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">201.0437390068961</data>
@@ -35106,7 +35106,7 @@
 <edge source="4283348351" target="4283348344" id="1">
   <data key="d14">[429205891, 429205876]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Shak Shak Tree Drive", "Waterrock Lane"]</data>
+  <data key="d10">["Waterrock Lane", "Shak Shak Tree Drive"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">201.04373900689612</data>
@@ -35654,7 +35654,7 @@
 <edge source="4284327623" target="5082026111" id="0">
   <data key="d14">[429314459, 429314461]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Westerband Drive", "St James Road"]</data>
+  <data key="d10">["St James Road", "Westerband Drive"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">404.81328557693246</data>
@@ -39180,7 +39180,7 @@
 <edge source="5082026111" target="4284327623" id="0">
   <data key="d14">[429314459, 429314461]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Westerband Drive", "St James Road"]</data>
+  <data key="d10">["St James Road", "Westerband Drive"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">404.81328557693246</data>
@@ -40078,7 +40078,7 @@
 <edge source="5092713950" target="1927155635" id="1">
   <data key="d14">[523021873, 523021879]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Lane 7", "Lane 3"]</data>
+  <data key="d10">["Lane 3", "Lane 7"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">121.21815342240262</data>
@@ -40763,7 +40763,7 @@
 <edge source="5101855225" target="5101855231" id="0">
   <data key="d14">[524228425, 524228430]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Torricelli Road", "Celsius Road"]</data>
+  <data key="d10">["Celsius Road", "Torricelli Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">113.76977240274552</data>
@@ -40815,7 +40815,7 @@
 <edge source="5101855231" target="5101855225" id="0">
   <data key="d14">[524228425, 524228430]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Torricelli Road", "Celsius Road"]</data>
+  <data key="d10">["Celsius Road", "Torricelli Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">113.7697724027455</data>
@@ -40995,7 +40995,7 @@
   <data key="d14">[95711496, 524428034, 524428035, 196412269]</data>
   <data key="d9">residential</data>
   <data key="d18">30</data>
-  <data key="d10">["Johan Vermeer Street", "Frans Hals Street", "Van Gogh Street"]</data>
+  <data key="d10">["Van Gogh Street", "Johan Vermeer Street", "Frans Hals Street"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">358.0014124350967</data>
@@ -41005,7 +41005,7 @@
   <data key="d14">[95711496, 524428034, 524428035, 196412269]</data>
   <data key="d9">residential</data>
   <data key="d18">30</data>
-  <data key="d10">["Johan Vermeer Street", "Frans Hals Street", "Van Gogh Street"]</data>
+  <data key="d10">["Van Gogh Street", "Johan Vermeer Street", "Frans Hals Street"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">358.00141243509665</data>
@@ -41293,7 +41293,7 @@
 <edge source="5105174593" target="4284398485" id="0">
   <data key="d14">[429321880, 524638861]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Nevis Drive", "Saba Drive"]</data>
+  <data key="d10">["Saba Drive", "Nevis Drive"]</data>
   <data key="d11">False</data>
   <data key="d19">[false, true]</data>
   <data key="d13">131.18561343116778</data>
@@ -41629,7 +41629,7 @@
 <edge source="5105795751" target="6695229434" id="0">
   <data key="d14">[524945801, 524945798]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Ellis Road", "Paris Drive"]</data>
+  <data key="d10">["Paris Drive", "Ellis Road"]</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
   <data key="d13">146.46155519822733</data>
@@ -43948,7 +43948,7 @@
 <edge source="5107695012" target="1973316147" id="0">
   <data key="d14">[186583497, 524715498]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Grand Fond Road", "Grand Fond Estate Road"]</data>
+  <data key="d10">["Grand Fond Estate Road", "Grand Fond Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">145.68589107615037</data>
@@ -45960,7 +45960,7 @@
 <edge source="5125906922" target="5927198472" id="0">
   <data key="d14">[259081035, 259099376, 259099377, 429189624, 627846907]</data>
   <data key="d9">primary</data>
-  <data key="d16">["2", "3"]</data>
+  <data key="d16">["3", "2"]</data>
   <data key="d10">["Swing", "Simpson Bay Causeway"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
@@ -47132,7 +47132,7 @@
 <edge source="5927162468" target="3844277824" id="0">
   <data key="d14">[429151904, 1259655754, 1020404240, 1020404241, 1020404242, 1020404243, 523395448, 523395452]</data>
   <data key="d9">primary</data>
-  <data key="d16">["3", "2"]</data>
+  <data key="d16">["2", "3"]</data>
   <data key="d10">Airport Road</data>
   <data key="d11">False</data>
   <data key="d12">False</data>
@@ -47153,7 +47153,7 @@
 <edge source="5927198471" target="272111674" id="0">
   <data key="d14">[1259655681, 429151903]</data>
   <data key="d9">primary</data>
-  <data key="d16">["3", "2"]</data>
+  <data key="d16">["2", "3"]</data>
   <data key="d18">30</data>
   <data key="d10">Airport Road</data>
   <data key="d11">False</data>
@@ -47164,7 +47164,7 @@
 <edge source="5927198472" target="5125906922" id="0">
   <data key="d14">[259081035, 259099376, 259099377, 429189624, 627846907]</data>
   <data key="d9">primary</data>
-  <data key="d16">["3", "2"]</data>
+  <data key="d16">["2", "3"]</data>
   <data key="d18">50</data>
   <data key="d10">["Swing", "Simpson Bay Causeway"]</data>
   <data key="d11">False</data>
@@ -47357,7 +47357,7 @@
 <edge source="6695229434" target="5105795751" id="0">
   <data key="d14">[524945801, 524945798]</data>
   <data key="d9">residential</data>
-  <data key="d10">["Ellis Road", "Paris Drive"]</data>
+  <data key="d10">["Paris Drive", "Ellis Road"]</data>
   <data key="d11">False</data>
   <data key="d12">True</data>
   <data key="d13">146.46155519822733</data>

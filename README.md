@@ -13,6 +13,14 @@ The lab then runs “what-if” scenarios—such as new connector roads, directi
 - **Consultation visuals**: simple maps + “before/after” impact summaries for stakeholders
 
 
+SXM Mobility Graph Lab is a Python project that turns Sint Maarten’s road network into a graph, simulates traffic demand (OD trips) moving through that graph, computes congestion/bottlenecks, and then tests what-if interventions (scenarios) to see which changes reduce congestion the most.
+
+###  It’s designed to grow into:
+
+- Streamlit for interactive dashboards + stakeholder demos
+- Django later for a portal (users/roles, scenario library, audits, uploads)
+- Shareable visuals via Plotly, plus optional exports for other tools.
+
 ## Dependency “extras” (install only what you need)
 
 - **geo** → osmnx, geopandas, shapely, pyproj *(OSM network + spatial)*

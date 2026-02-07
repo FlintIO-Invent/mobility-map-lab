@@ -11,7 +11,8 @@ def random_od(
     max_demand: float = 150.0,
     seed: int = 42,
 ) -> list[tuple[Any, Any, float]]:
-    """Generate random origin-destination (OD) demand pairs from a graph's nodes.
+    """Generate random(Because you don’t yet have real travel demand data (mobile-phone OD matrices, traffic counts per zone, surveys, etc.)) 
+    origin-destination (OD) demand pairs from a graph's nodes.
 
     Samples `n_pairs` (origin, destination) node pairs uniformly at random from `G.nodes`,
     ensuring origin != destination, and assigns each pair a random demand value drawn
@@ -32,6 +33,15 @@ def random_od(
     :raises ValueError: If `G` has fewer than 2 nodes.
     :return: A list of `(origin, destination, demand)` tuples.
     :rtype: list[tuple[Any, Any, float]]
+
+    How you’ll upgrade it later (natural evolution)
+        Replace “random OD” with:
+        zone-based OD (Airport, Philipsburg, Simpson Bay, etc.)
+        weighted by:
+            population density
+            hotel/POI density
+            commuter patterns
+            observed traffic counts
     """
     rng = random.Random(seed)
     nodes = list(G.nodes)
